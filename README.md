@@ -1,6 +1,6 @@
 ## AWS CONFIGURATIONS FOR A NEWLY CREATED AWS ACCOUNT
 
-When creating a new AWS account, there a few initial steps that need to be taken in order to ensure security and compliance. The first thing that needs to be done is to create some IAM groups and policies for future users. Secondly, set up CloudTrail to log and monitor account activity.
+When creating a new AWS account, there are a few initial steps that need to be taken in order to ensure security and compliance. The first thing that needs to be done is to create some IAM groups and policies for future users. Secondly, ensuring each user is enabling MFA in order to add the extra layer of account security.
 
 ## PREREQUISITES
 
@@ -21,17 +21,5 @@ The IAM Terraform module will configure IAM groups and policies for different ty
 $ cd terraform/iam
 
 # create iam resources
-$ terraform apply -auto-approve
-```
-
-### SETUP CLOUDTRAIL
-
-```
-The CloudTrail Terraform module will configure CloudTrail logs to monitor any and all account activity that occurs.
-
-# navigate to cloudtrail directory
-$ cd terraform/cloudtrail
-
-# create cloudtrail resources
 $ terraform apply -auto-approve
 ```
